@@ -1,50 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
 
 body {
-  background-color: black;
+  background-image: url("https://cdn.hipwallpaper.com/i/95/41/eg0FP6.gif");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size:  600px 1020px;
+  display: flex;
+  justify-content: center;
 }
 
 .center_text {
   text-align: center;
   position: relative;
   opacity: 1;
-  color: black;
+  color: white;
 }
 
 .center_text h1 {
-  top: -20px;
+  top: -30px;
   font-family: 'Work Sans', sans-serif;
   font-size: 100px;
   position: relative;
-  animation-name: title;
-  animation-duration: 3s;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
 }
 
-@keyframes title {
-  0%   {top:-400px; opacity: 0;}
-  80% {top:-20px; opacity: .8;}
-  100% {opacity: 1;}
-}
-
-.center_text p1 {
-  top: -20px;
+.center_text p {
   font-family: 'Work Sans', sans-serif;
   font-size: 40px;
   position: relative;
-  animation-name: subTitle;
-  animation-duration: 2.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
 }
 
-@keyframes subTitle {
-  0%   {top:-400px; opacity: 0;}
-  80% {top:-20px; opacity: .8;}
-  100% {opacity: 1;}
+.center_text iframe {
+  margin-bottom: 150px;
+  position: static;
+  margin-left: 0;
+  margin-right: 100px;
 }
 
 .center_image {
@@ -54,12 +43,12 @@ body {
   left:0;
   bottom:0;
   right:0;
-  height:auto;
+  height:100%;
   width:100%;
-  background-image: url("https://i.stack.imgur.com/spmUM.gif");
-  background-repeat: repeat-x;
+  background-image: url("https://cdn.hipwallpaper.com/i/95/41/eg0FP6.gif");
+  background-repeat: repeat;
   background-attachment: fixed;
-  background-size:  1200px 700px;
+  background-size:  600px 1020px;
   display: flex;
   justify-content: center;
 }

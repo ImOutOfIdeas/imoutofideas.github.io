@@ -8,11 +8,11 @@ body {
   text-align: center;
   position: relative;
   opacity: 1;
-  color: black;
+  color: white;
 }
 
 .center_text h1 {
-  top: -20px;
+  top: -45px;
   font-family: 'Work Sans', sans-serif;
   font-size: 100px;
   position: relative;
@@ -25,29 +25,30 @@ body {
 
 @keyframes title {
   0%   {top:-400px; opacity: 0;}
-  80% {top:-20px; opacity: .8;}
+  80% {top:-45px; opacity: .8;}
   100% {opacity: 1;}
 }
 
-.center_text p1 {
-  top: -20px;
+.center_text p {
+  top: 0px;
   font-family: 'Work Sans', sans-serif;
   font-size: 40px;
   position: relative;
   animation-name: subTitle;
   animation-duration: 2.5s;
-  animation-delay: 0.5s;
+  animation-delay: 2s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
 
 @keyframes subTitle {
   0%   {top:-400px; opacity: 0;}
-  80% {top:-20px; opacity: .8;}
+  10% {top:0px; opacity: 0;}
   100% {opacity: 1;}
 }
 
 .center_image {
+  filter: brightness(80%);
   position: absolute;
   margin: 0;
   top: 0;
@@ -56,10 +57,10 @@ body {
   right:0;
   height:auto;
   width:100%;
-  background-image: url("https://i.stack.imgur.com/spmUM.gif");
+  background-image: url("https://data.whicdn.com/images/277379761/original.gif");
   background-repeat: repeat-x;
   background-attachment: fixed;
-  background-size:  1200px 700px;
+  background-size:  750px 650px;
   display: flex;
   justify-content: center;
 }
