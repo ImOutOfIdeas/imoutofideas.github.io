@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
 
 body {
-  background-image: url("https://cdn.hipwallpaper.com/i/95/41/eg0FP6.gif");
+  background-image: url("http://getwallpapers.com/wallpaper/full/c/3/9/557007.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size:  600px 1020px;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
@@ -33,9 +33,12 @@ body {
   margin-bottom: 150px;
   position: static;
   margin-left: 0;
-  margin-right: 100px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
 }
 
+/*
 .center_image {
   position: absolute;
   margin: 0;
@@ -45,14 +48,14 @@ body {
   right:0;
   height:100%;
   width:100%;
-  background-image: url("https://cdn.hipwallpaper.com/i/95/41/eg0FP6.gif");
+  background-image: url("http://getwallpapers.com/wallpaper/full/c/3/9/557007.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size:  600px 1020px;
+  background-size:  cover;
   display: flex;
   justify-content: center;
 }
-
+*/
 
 /* Manages the footers */
 

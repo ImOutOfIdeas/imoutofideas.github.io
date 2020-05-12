@@ -51,16 +51,17 @@ body {
   filter: brightness(80%);
   position: absolute;
   margin: 0;
+  margin-bottom: 50px;
   top: 0;
   left:0;
   bottom:0;
   right:0;
   height:auto;
   width:100%;
-  background-image: url("https://data.whicdn.com/images/277379761/original.gif");
-  background-repeat: repeat-x;
+  background-image: url("http://getwallpapers.com/wallpaper/full/f/0/7/558296.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size:  750px 650px;
+  background-size: cover;
   display: flex;
   justify-content: center;
 }
