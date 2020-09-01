@@ -5,57 +5,41 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-}
-
-.center_text {
-  text-align: center;
-  position: relative;
-  opacity: 1;
   color: white;
 }
 
-.center_text h1 {
+
+ h1 {
   top: -30px;
+  text-align: center;
   font-family: 'Work Sans', sans-serif;
   font-size: 100px;
   position: relative;
 }
 
-.center_text p {
+ p {
   font-family: 'Work Sans', sans-serif;
-  font-size: 40px;
-  position: relative;
+  font-size: 30px;
 }
 
-.center_text iframe {
-  margin-bottom: 150px;
-  position: static;
-  margin-left: 0;
-  margin-right: 0;
-  display: flex;
-  justify-content: center;
+iframe {
+  width: 400px;
+  height: 300px;
 }
 
-/*
-.center_image {
-  position: absolute;
-  margin: 0;
-  top: 0;
-  left:0;
-  bottom:0;
-  right:0;
-  height:100%;
-  width:100%;
-  background-image: url("http://getwallpapers.com/wallpaper/full/c/3/9/557007.jpg");
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size:  cover;
-  display: flex;
-  justify-content: center;
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 100px;
+  grid-column-gap: 30px;
+  text-align: center;
 }
-*/
+
+.bottomSpacer {
+    margin: 50px;
+    opacity: 0;
+}
+
 
 /* Manages the footers */
 
