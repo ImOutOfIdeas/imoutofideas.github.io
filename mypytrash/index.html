@@ -10,22 +10,6 @@
     </head>
     <body>
 
-      <?php
-		    function checkDevice() {
-		        $useragent=$_SERVER['HTTP_USER_AGENT'];
-            return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up.browser|up.link|webos|wos)/i", $useragent);
-		    }
-	    ?>
-
-      <?php
-    		$detectMobile = checkDevice();
-    		if($detectMobile){
-          // Redirect to mobile site OR do some thing.
-    		  header('Location: http://imoutofideas.github.io/mypytrash/mobileindex.html');
-    		}
-    	?>
-
-
       <div class="center_image">
         <div class="center_text">
           <h1>My Py Trash</h1>
