@@ -8,6 +8,24 @@
       <link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-python-icon.png">
     </head>
     <body>
+
+
+      <?php
+		    function checkDevice() {
+		        $useragent=$_SERVER['HTTP_USER_AGENT'];
+            return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up.browser|up.link|webos|wos)/i", $useragent);
+		    }
+	    ?>
+
+      <?php
+    		$detectMobile = checkDevice();
+    		if($detectMobile){
+          // Redirect to mobile site OR do some thing.
+    		  header('Location: http://imoutofideas.github.io/mypytrash/mobileprojects.html');
+    		}
+    	?>
+
+
       <h1>Projects</h1>
       <br>
       <br>
