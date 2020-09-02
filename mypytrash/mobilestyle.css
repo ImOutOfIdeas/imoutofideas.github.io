@@ -66,6 +66,11 @@ body {
   justify-content: center;
 }
 
+.bottomSpacer {
+    margin: 50px;
+    opacity: 0;
+}
+
 
 /* Manages the footers */
 
