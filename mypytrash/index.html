@@ -2,13 +2,30 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
       <title>My Py Trash</title>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="mobilestyle.css" />
       <link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-python-icon.png">
     </head>
     <body>
-      
+
+      <?php
+		    function checkDevice() {
+		        $useragent=$_SERVER['HTTP_USER_AGENT'];
+            return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up.browser|up.link|webos|wos)/i", $useragent);
+		    }
+	    ?>
+
+      <?php
+    		$detectMobile = checkDevice();
+    		if($detectMobile){
+          // Redirect to mobile site OR do some thing.
+    		  header('Location: http://imoutofideas.github.io/mypytrash/mobileindex.html');
+    		}
+    	?>
+
+
       <div class="center_image">
         <div class="center_text">
           <h1>My Py Trash</h1>
