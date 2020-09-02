@@ -8,13 +8,13 @@ body {
   text-align: center;
   position: relative;
   opacity: 1;
-  color: white;
+  color: black;
 }
 
 .center_text h1 {
-  top: -45px;
+  top: -20px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 100px;
+  font-size: 70px;
   position: relative;
   animation-name: title;
   animation-duration: 3s;
@@ -25,43 +25,43 @@ body {
 
 @keyframes title {
   0%   {top:-400px; opacity: 0;}
-  80% {top:-45px; opacity: .8;}
+  80% {top:-20px; opacity: .8;}
   100% {opacity: 1;}
 }
 
-.center_text p {
-  top: 0px;
+.center_text p1 {
+  top: -20px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
   position: relative;
   animation-name: subTitle;
   animation-duration: 2.5s;
-  animation-delay: 2s;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
 }
 
 @keyframes subTitle {
   0%   {top:-400px; opacity: 0;}
-  10% {top:0px; opacity: 0;}
+  80% {top:-20px; opacity: .8;}
   100% {opacity: 1;}
 }
 
 .center_image {
-  filter: brightness(80%);
   position: absolute;
   margin: 0;
-  margin-bottom: 50px;
   top: 0;
   left:0;
   bottom:0;
   right:0;
   height:auto;
   width:100%;
-  background-image: url("http://getwallpapers.com/wallpaper/full/f/0/7/558296.jpg");
-  background-repeat: no-repeat;
+  background-image: url("https://i.stack.imgur.com/spmUM.gif");
+  background-repeat: repeat-x;
   background-attachment: fixed;
-  background-size: cover;
+  background-size:  auto 690px;
   display: flex;
   justify-content: center;
 }
@@ -76,14 +76,14 @@ body {
   background-color: black;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 5px;
   position: fixed;
   left: 0;
   right: 0;
   margin-left: 0;
   margin-right: 0;
   bottom: 0;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .footer a {
@@ -91,7 +91,7 @@ body {
   display: block;
   color: #f8f0af;
   text-align: center;
-  padding: 14px 30px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 

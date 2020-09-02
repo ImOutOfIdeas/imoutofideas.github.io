@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+body {
+  background-color: black;
+}
+
+.center_text {
+  text-align: center;
+  position: relative;
+  opacity: 1;
+  color: black;
+}
+
+.center_text h1 {
+  top: -20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 60px;
+  position: relative;
+  animation-name: title;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+@keyframes title {
+  0%   {top:-400px; opacity: 0;}
+  80% {top:-20px; opacity: .8;}
+  100% {opacity: 1;}
+}
+
+.center_text p1 {
+  top: -20px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  position: relative;
+  animation-name: subTitle;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+@keyframes subTitle {
+  0%   {top:-400px; opacity: 0;}
+  80% {top:-20px; opacity: .8;}
+  100% {opacity: 1;}
+}
+
+.center_image {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;
+  height:auto;
+  width:100%;
+  background-image: url("https://i.stack.imgur.com/spmUM.gif");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size:  1000px 550px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Manages the footers */
+
+.footer {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  bottom: 0;
+  padding-bottom: 30px;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: #f8f0af;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  background-color: #fef58b;
+  color: black;
+}

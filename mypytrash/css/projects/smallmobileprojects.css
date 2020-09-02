@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
+
+body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/c/3/9/557007.jpg");
+  background-color: black;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  top: -30px;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 70px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+ p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+}
+
+iframe {
+
+  width: 300px;
+  height: 220px;
+}
+
+.projects {
+  margin-right: auto;
+  margin-left: 1px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 100px;
+  text-align: center;
+}
+
+.bottomSpacer {
+    margin: 50px;
+    opacity: 0;
+}
+
+
+/* Manages the footers */
+
+.footer {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 13px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  bottom: 0;
+  padding-bottom: 40px;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: #f8f0af;
+  text-align: center;
+  padding: 8px 13px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  background-color: #fef58b;
+  color: black;
+}
