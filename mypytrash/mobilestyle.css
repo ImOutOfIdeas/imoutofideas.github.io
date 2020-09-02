@@ -61,7 +61,7 @@ body {
   background-image: url("https://i.stack.imgur.com/spmUM.gif");
   background-repeat: repeat-x;
   background-attachment: fixed;
-  background-size:  auto 650px;
+  background-size:  auto 600px;
   display: flex;
   justify-content: center;
 }
