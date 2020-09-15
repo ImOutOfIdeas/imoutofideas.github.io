@@ -11,7 +11,7 @@ images.player = new Image();
 images.player.src = "images/cupheadSprite.png";
 //const characterActions = ["up", "top right","right","down right","down","jump"];
 const characterActions = ["up", "up right", "right", "down right", "down"];
-var numberOfCharacters = 25;
+var numberOfCharacters = 30;
 const characters = [];
 
 class Character {
