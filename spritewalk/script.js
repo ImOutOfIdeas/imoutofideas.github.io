@@ -1,6 +1,16 @@
-console.log("Set Variable numberOfCharacters to adjust how many cupheads are spawned!");
+var rangeslider = document.getElementById("sliderRange");
+var output = document.getElementById("demo");
+output.innerHTML = rangeslider.value;
+var numberOfCharacters = rangeslider.value;
+
+rangeslider.oninput = function() {
+  output.innerHTML = this.value;
+  numberOfCharacters = this.value;
+}
 
 
+
+// Leave Below Code Alone
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
@@ -9,10 +19,8 @@ canvas.width = window.innerWidth;
 const images = {};
 images.player = new Image();
 images.player.src = "images/cupheadSprite.png";
-//const characterActions = ["up", "top right","right","down right","down","jump"];
 const characterActions = ["up", "up right", "right", "down right", "down"];
-var numberOfCharacters = 30;
-const characters = [];
+var characters = [];
 
 class Character {
     constructor(){
@@ -108,6 +116,16 @@ function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH) {
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    rangeslider.oninput = function() {
+        output.innerHTML = this.value;
+        numberOfCharacters = this.value;
+        characters = [];
+        for (i = 0; i < numberOfCharacters; i++) {
+            characters.push(new Character());
+        }
+    }
+
     for (i = 0; i < characters.length; i++) {
         characters[i].draw();
         characters[i].update();

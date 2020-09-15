@@ -10,15 +10,48 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-size: 20px;
+}
+
 .floor {
     position: absolute;
     top: -200%;
     left: -200%;
     width: 500%;
     height: 500%;
-    background: blue;
+    background: tan;
     background: url("images/brickBackground.jpg");
     transform: rotate3d(1, 0, 1, 50deg);
+}
+
+.rangeslider{
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+}
+
+.myslider {
+    -webkit-appearance: none;
+    background: white;
+    width: 50%;
+    height: 30px;
+    opacity: 0.5;
+   }
+
+
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: black;
+    width: 5%;
+    height: 30px;
+}
+
+
+.myslider:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 canvas {
