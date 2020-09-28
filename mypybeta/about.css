@@ -16,78 +16,6 @@
     --accent-color: orange;
 }
 
-
-
-/* Logo Animation Handling */
-#logo {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    fill: transparent;
-    animation: fill 0.5s ease forwards 3s;
-}
-
-#logo path:nth-child(1){
-    stroke-dasharray: 838.6px;
-    stroke-dashoffset: 838.6px;
-    animation: line-anim 1500ms linear forwards;
-}
-
-#logo path:nth-child(2){
-    stroke-dasharray: 406.4px;
-    stroke-dashoffset: 406.4px;
-    animation: line-anim 1500ms linear forwards 0.2s;
-}
-#logo path:nth-child(3){
-    stroke-dasharray: 445.5px;
-    stroke-dashoffset: 445.5px;
-    animation: line-anim 1500ms linear forwards 0.4s;
-}
-#logo path:nth-child(4){
-    stroke-dasharray: 406.4px;
-    stroke-dashoffset: 406.4px;
-    animation: line-anim 1500ms linear forwards 0.6s;
-}
-#logo path:nth-child(5){
-    stroke-dasharray: 344.6px;
-    stroke-dashoffset: 344.6px;
-    animation: line-anim 1500ms linear forwards 0.8s;
-}
-#logo path:nth-child(6){
-    stroke-dasharray: 560.2px;
-    stroke-dashoffset: 560.2px;
-    animation: line-anim 1500ms linear forwards 1.0s;
-}
-#logo path:nth-child(7){
-    stroke-dasharray: 495.75px;
-    stroke-dashoffset: 495.75px;
-    animation: line-anim 1500ms linear forwards 1.2s;
-}
-#logo path:nth-child(8){
-    stroke-dasharray: 487.7px;
-    stroke-dashoffset: 487.7px;
-    animation: line-anim 1500ms linear forwards 1.4s;
-}
-#logo path:nth-child(9){
-    stroke-dasharray: 569.2px;
-    stroke-dashoffset: 569.2px;
-    animation: line-anim 1500ms linear forwards 1.6s;
-}
-@keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-@keyframes fill {
-    to {
-        fill: white;
-    }
-}
-
-
-
-
 body {
     color: var(--base-color);
     background: black;
@@ -109,26 +37,6 @@ h1 {
     margin-bottom: 0;
 }
 
-iframe {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ul {
-    list-style-type: none;
-    line-height: 2.5;
-}
-
-.question {
-    margin-top: 40px;
-    letter-spacing: 5px;
-}
-
-.response {
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
 .bottomSpace {
     color: black;
     margin-bottom: 8vh;
@@ -137,7 +45,6 @@ ul {
 li {
     margin-bottom: 20px;
 }
-
 
 /* Scrollbar styling */
 body::-webkit-scrollbar {
@@ -193,16 +100,16 @@ main {
 }
 .nav-link:hover .fill{
     fill: var(--accent-color);
-    transition: fill 500ms ease;
+    transition: fill 1000ms ease;
 }
 .nav-link:hover .fillStroke{
     fill: var(--accent-color);
     stroke: var(--accent-color);
-    transition: fill, stroke 500ms ease;
+    transition: fill, stroke 1000ms ease;
 }
 .nav-link:hover .stroke{
     stroke: var(--accent-color);
-    transition: stroke 500ms ease;
+    transition: stroke 1000ms ease;
 }
 .nav-link:hover .link-text {
     color: var(--accent-color);
@@ -222,6 +129,7 @@ main {
     margin-left: 1rem;
     transition: color 400ms ease;
 }
+
 .navbar:hover .baricons .link-text{
     animation: iconFade 700ms;
 }
@@ -229,6 +137,10 @@ main {
     0% {filter: opacity(0);}
     20% {filter: opacity(0);}
     100% {filter: opacity(100%);}
+}
+
+#logo {
+    background: var(--bg-secondary);
 }
 
 .logo {
@@ -273,11 +185,7 @@ main {
     transform: rotate(-360deg);
 }
 
-#logoIcon {
-    background: var(--bg-secondary);
-}
-
-#logoIcon:hover {
+#logo:hover {
     cursor: default;
 }
 
@@ -299,27 +207,9 @@ main {
         padding: 1rem;
     }
 
-    .largeTitle svg {
-        display: none;
-    }
-
-    ul {
-        padding-left: 0px;
-    }
     .mainContent {
         margin: auto 8vw;
 
-    }
-
-    .question {
-        font-size: 30px;
-        text-align: center;
-
-    }
-
-    .response {
-        font-size: 20px;
-        text-align: center;
     }
 
     .navbar {
@@ -347,23 +237,8 @@ main {
         padding: 1rem;
     }
 
-    .smallTitle {
-        display: none;
-    }
-
     .mainContent {
         margin: auto 8vw;
-    }
-
-    .question {
-        font-size: 35px;
-        text-align: left;
-    }
-
-    .response {
-        font-size: 20px;
-        text-align: right;
-        margin-left: 35vw;
     }
 
     .navbar {

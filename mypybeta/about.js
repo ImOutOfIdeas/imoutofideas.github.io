@@ -1,9 +1,3 @@
-const logo = document.querySelectorAll("#logo path");
-
-for (var i = 0; i<logo.length; i++) {
-    console.log(`"Letter ${i + 1} is ${logo[i].getTotalLength()}`);
-}
-
 const accent = localStorage.getItem("--accent-color");
 const switcher = document.getElementById("accentSwitcher");
 
