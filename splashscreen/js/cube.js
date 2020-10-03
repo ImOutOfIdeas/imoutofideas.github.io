@@ -13,7 +13,7 @@ function choose(choices) {
 }
 
 var cube;
-var speeds = [-3, -4, -5, 5, 4, 3];
+var speeds = [-3, -4, 4, 3];
 var shifts = [-100, 100];
 
 function component(width, height, color, x, y) {
