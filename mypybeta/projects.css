@@ -64,6 +64,17 @@ li {
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
     grid-auto-flow: column;
+    font-size: 10px;
+}
+
+.gridItem h1{
+    font-size: 30px;
+    transition: font-size 500ms ease;
+}
+
+.gridItem h1:hover{
+    cursor: pointer;
+    font-size: 35px;
 }
 
 .gridItem rect:first-of-type{
