@@ -63,21 +63,18 @@ li {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
+    grid-auto-flow: column;
 }
 
-.gridItem {
+.gridItem rect:first-of-type{
     text-align: center;
-    font-size: 30px;
-    padding: 5px;
-    border: 2px var(--accent-color) solid;
-    border-radius: 5%;
-    background-color: var(--bg-primary);
-    transition: background-color 500ms;
+    fill: var(--bg-primary);
+    transition: fill 500ms;
 }
 
-.gridItem:hover {
+.gridItem:hover rect:first-of-type{
     cursor: pointer;
-    background-color: var(--bg-secondary);
+    fill: var(--bg-secondary);
 }
 
 /* Handles Script Menu Formatting */

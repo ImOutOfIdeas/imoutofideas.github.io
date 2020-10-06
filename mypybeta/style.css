@@ -13,13 +13,14 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --base-color: lightgrey;
-    --accent-color: orange;
+    --accent-color: white;
 }
 
 
 
 /* Logo Animation Handling */
 #logo {
+    z-index: -1;
     position: absolute;
     top: 20%;
     left: 50%;
