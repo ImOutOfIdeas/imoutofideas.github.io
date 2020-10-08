@@ -298,6 +298,27 @@ main {
 }
 
 
+/* Color Wheel Handling */
+#picker {
+padding: 20px;
+position: absolute;
+left: 280px;
+bottom: -300px;
+padding: 60px 60px 60px 30px;
+filter: opacity(100);
+transition: bottom 500ms ease;
+}
+
+#paletteBtn:hover #picker {
+    bottom: -40px;
+}
+
+#colorPaletteSelector{
+    min-width: 200px;
+}
+
+
+
 /* Small Screen Media Query */
 @media only screen and (max-width: 600px) {
     main {

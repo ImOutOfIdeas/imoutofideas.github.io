@@ -169,3 +169,32 @@ btn.addEventListener("click", () => {
 
 
 //---------------------------------------------//
+
+
+//Color Selector Wheel
+colorPalette = document.querySelector("#picker")
+
+colorPicker = new iro.ColorPicker("#picker", {
+    width: 200,
+    color: "#FFFFFF",
+    display: "block",
+    layout: [
+        {
+            component: iro.ui.Wheel
+        }
+    ]
+});
+
+colorPicker.on(['color:change'], function(color, display) {
+    this.display = "block";
+    localStorage.setItem("--accent-color", color.hexString);
+    document.documentElement.style.setProperty("--accent-color", color.hexString);
+});
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------

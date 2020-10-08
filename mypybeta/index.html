@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     <link rel="stylesheet" href="style.css">
     <title>My Py Trash</title>
 </head>
@@ -40,13 +41,20 @@
             <li class="baricons">
                 <a href="#" onclick="themeSwitch()" class="nav-link">
                     <svg id="accentSwitcher" class="stroke" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="var(--base-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
-                    <span class="link-text">Accent Color</span>
+                    <span class="link-text">Random Accent Color</span>
                 </a>
             </li>
             <li class="baricons">
                 <a href="#" id="speechRegBtn" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" class="stroke" viewBox="0 0 24 24" fill="none" stroke="var(--base-color)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                     <span id="vrThemeSwither" class="link-text">Voice Accent Color</span>
+                </a>
+            </li>
+            <li class="baricons">
+                <a href="#" id="paletteBtn" class="nav-link">
+                    <svg class="stroke" fill="none" stroke-width="4" stroke="var(--base-color)" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Color picker" id="Color_picker"><path d="M77.05,2.96a6.6632,6.6632,0,0,0-9.42,0L63.42,7.18l9.41,9.41,4.22-4.22a6.6512,6.6512,0,0,0,0-9.41Z"/><path d="M59.7109,6.293a.9994.9994,0,0,0-1.414,0l-6,6a1,1,0,0,0,0,1.414l14,14a.9995.9995,0,0,0,1.414,0l6-6a.9994.9994,0,0,0,0-1.414Z"/><path d="M16.21,65.3916C15.4727,66.354,9.0039,74.9126,9.0039,79a8,8,0,0,0,16,0c0-4.0874-6.4687-12.646-7.206-13.6084A1.037,1.037,0,0,0,16.21,65.3916Z"/><polygon points="38.595 32 57.42 32 62.59 26.83 53.18 17.42 38.595 32"/><path d="M22.3,48.29a.9416.9416,0,0,0-.24.39l-4,12a1.0065,1.0065,0,0,0,.24,1.03A.9837.9837,0,0,0,19,62a1.127,1.127,0,0,0,.32-.05l12-4a.9835.9835,0,0,0,.39-.24L55.42,34H36.5946Z"/></g></svg>
+                    <span id="colorPaletteSelector" class="link-text">Accent Color Selector</span>
+                    <div id="picker"></div>
                 </a>
             </li>
         </ul>

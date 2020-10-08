@@ -92,7 +92,7 @@ main {
     height: 5rem;
     color: var(--base-color);
     text-decoration: none;
-    transition: color 400ms ease;
+    transition: color 300ms ease;
 }
 
 .nav-link:hover {
@@ -100,16 +100,16 @@ main {
 }
 .nav-link:hover .fill{
     fill: var(--accent-color);
-    transition: fill 1000ms ease;
+    transition: fill 600ms ease;
 }
 .nav-link:hover .fillStroke{
     fill: var(--accent-color);
     stroke: var(--accent-color);
-    transition: fill, stroke 1000ms ease;
+    transition: fill, stroke 600ms ease;
 }
 .nav-link:hover .stroke{
     stroke: var(--accent-color);
-    transition: stroke 1000ms ease;
+    transition: stroke 600ms ease;
 }
 .nav-link:hover .link-text {
     color: var(--accent-color);
@@ -192,12 +192,33 @@ main {
 .logo svg {
     align-self: center;
     transform: rotate(0deg);
-    transition: 600ms ease-out;
+    transition: transform 600ms ease-out;
 }
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
 }
+
+
+/* Color Wheel Handling */
+#picker {
+padding: 20px;
+position: absolute;
+left: 280px;
+bottom: -300px;
+padding: 60px 60px 60px 30px;
+filter: opacity(100);
+transition: bottom 500ms ease;
+}
+
+#paletteBtn:hover #picker {
+    bottom: -40px;
+}
+
+#colorPaletteSelector{
+    min-width: 200px;
+}
+
 
 
 /* Small Screen Media Query */

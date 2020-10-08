@@ -14,6 +14,7 @@
     --bg-secondary: #141418;
     --base-color: lightgrey;
     --accent-color: white;
+    --palette-display: "block";
 }
 
 
@@ -194,16 +195,19 @@ main {
 }
 .nav-link:hover .fill{
     fill: var(--accent-color);
-    transition: fill 500ms ease;
+    transition: fill 600ms ease;
 }
 .nav-link:hover .fillStroke{
     fill: var(--accent-color);
     stroke: var(--accent-color);
-    transition: fill, stroke 500ms ease;
+    transition: fill, stroke 600ms ease;
 }
 .nav-link:hover .stroke{
     stroke: var(--accent-color);
-    transition: stroke 500ms ease;
+    transition: stroke 600ms ease;
+}
+.navbar-nav:hover .logo .link-text{
+    color: var(--accent-color);
 }
 .nav-link:hover .link-text {
     color: var(--accent-color);
@@ -212,19 +216,15 @@ main {
     stroke: var(--accent-color);
 }
 
-.navbar-nav:hover .logo .link-text{
-    color: var(--accent-color);
-}
 
 .link-text {
     color: var(--base-color);
     font-size: 20px;
     display: none;
     margin-left: 1rem;
-    transition: color 400ms ease;
 }
 .navbar:hover .baricons .link-text{
-    animation: iconFade 700ms;
+    animation: iconFade 600ms;
 }
 @keyframes iconFade {
     0% {filter: opacity(0);}
@@ -267,7 +267,7 @@ main {
 
 #accentSwitcher {
     transform: rotate(0deg);
-    transition: transform 500ms;
+    transition: transform 600ms;
 }
 
 .nav-link:hover #accentSwitcher {
@@ -285,11 +285,31 @@ main {
 .logo svg {
     align-self: center;
     transform: rotate(0deg);
-    transition: 600ms ease-out;
+    transition: transform 600ms ease-in;
 }
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
+}
+
+
+/* Color Wheel Handling */
+#picker {
+padding: 20px;
+position: absolute;
+left: 280px;
+bottom: -300px;
+padding: 60px 60px 60px 30px;
+filter: opacity(100);
+transition: bottom 500ms ease;
+}
+
+#paletteBtn:hover #picker {
+    bottom: -40px;
+}
+
+#colorPaletteSelector{
+    min-width: 200px;
 }
 
 
@@ -372,7 +392,7 @@ main {
         height: 100vh;
         position: fixed;
         background-color: var(--bg-primary);
-        transition: width 250ms ease-in;
+        transition: width 200ms ease-in;
     }
 
     .navbar:hover {
