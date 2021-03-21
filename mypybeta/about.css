@@ -89,7 +89,7 @@ main {
 .nav-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    /*height: 5rem;*/
     color: var(--base-color);
     text-decoration: none;
     transition: color 300ms ease;
