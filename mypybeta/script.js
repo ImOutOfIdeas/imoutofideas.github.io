@@ -38,8 +38,6 @@ switcher.onclick = () => {
 }
 //-----------------------------------------------------------------------
 
-
-
 // Voice Recognition Color Changer
 
 const btn = document.querySelector("#speechRegBtn");
@@ -55,8 +53,8 @@ var accentColor = ["#F71735", "#008BF8", "#F5F749", "#C04CFD", "#FFAC0D", "#41EA
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;';
 
 console.log("Voice commands, as of now, are not supported on MS Edge.")
-console.log("")
-console.log("List of available colors: " + colors)
+console.log("--------------------------------------------------------")
+console.log("List of available voice command colors: " + colors)
 
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
