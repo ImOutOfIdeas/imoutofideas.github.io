@@ -1,8 +1,8 @@
 const canvas = document.getElementById("canvas");
 const cursor = document.getElementById("cursor");
 const ctx = canvas.getContext("2d");
-canvas.width = 800;
-canvas.height = 500;
+canvas.width = 400;
+canvas.height = 250;
 
 const keys = [];
 

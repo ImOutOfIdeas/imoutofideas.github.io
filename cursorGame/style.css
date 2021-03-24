@@ -7,11 +7,13 @@
 }
 
 body {
+    cursor: none;
     background-color: grey;
+    overflow: hidden;
 }
 
 .title {
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: center;
     font-family: 'Ranchers', cursive;
     font-size: 50px;
@@ -19,8 +21,8 @@ body {
 }
 
 canvas {
-    width: 800px;
-    height: 500px;
+    width: 400px;
+    height: 250px;
     background-color: #d79c50;
     border: 5px solid black;
     border-radius: 5px;
