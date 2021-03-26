@@ -8,7 +8,7 @@ $('body').append(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.update();
 
-function build();
+function build()
     var geometry = new THREE.OctahedronGeometry(2,2,2); // Define Main Geometry
     var material = new THREE.MeshBasicMaterial({color: 0xff0000}); // Material for Main Geometry
     var cube = new THREE.Mesh(geometry,material); // Mesh for Main Geometry
