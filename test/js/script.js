@@ -8,15 +8,14 @@ $('body').append(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.update();
 
-function build()
-    var geometry = new THREE.OctahedronGeometry(2,2,2); // Define Main Geometry
-    var material = new THREE.MeshBasicMaterial({color: 0xff0000}); // Material for Main Geometry
-    var cube = new THREE.Mesh(geometry,material); // Mesh for Main Geometry
-    var edges = new THREE.EdgesGeometry(geometry); // Finds the Edges of Main Geometry
-    var lineMat = new THREE.LineBasicMaterial({color: 0xffffff}); // Material for lines connecting edges
-    var lines = new THREE.LineSegments(edges, lineMat) // Lines Connecting Edges
-    scene.add(cube);
-    scene.add(lines);
+var geometry = new THREE.OctahedronGeometry(2,2,2); // Define Main Geometry
+var material = new THREE.MeshBasicMaterial({color: 0xff0000}); // Material for Main Geometry
+var cube = new THREE.Mesh(geometry,material); // Mesh for Main Geometry
+var edges = new THREE.EdgesGeometry(geometry); // Finds the Edges of Main Geometry
+var lineMat = new THREE.LineBasicMaterial({color: 0x000000}); // Material for lines connecting edges
+var lines = new THREE.LineSegments(edges, lineMat) // Lines Connecting Edges
+scene.add(cube);
+scene.add(lines);
 
 cube.position.z = 0;
 
