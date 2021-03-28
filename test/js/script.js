@@ -8,27 +8,25 @@ $('body').append(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.update();
 
-function build();
+function draw() {
     var geometry = new THREE.OctahedronGeometry(2,2,2); // Define Main Geometry
     var material = new THREE.MeshBasicMaterial({color: 0xff0000}); // Material for Main Geometry
     var cube = new THREE.Mesh(geometry,material); // Mesh for Main Geometry
     var edges = new THREE.EdgesGeometry(geometry); // Finds the Edges of Main Geometry
     var lineMat = new THREE.LineBasicMaterial({color: 0xffffff}); // Material for lines connecting edges
     var lines = new THREE.LineSegments(edges, lineMat) // Lines Connecting Edges
+    cube.position.z = 0;
+    lines.position.z = 0;
+    camera.position.z = 10;
     scene.add(cube);
     scene.add(lines);
+}
 
-cube.position.z = 0;
-
-
-lines.position.z = 0;
-
-camera.position.z = 10;
-
+draw();
 renderer.render(scene,camera);
 var animate = function(){
-    lines.rotation.y += 0.01;
-    cube.rotation.y += 0.01;
+    //lines.rotation.y += 0.01;
+    //cube.rotation.y += 0.01;
     renderer.render(scene,camera);
     requestAnimationFrame(animate);
  }
