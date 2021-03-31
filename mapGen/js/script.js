@@ -7,7 +7,7 @@ console.log("Use:  clearThree(scene);  to clear the current render.")
 // Setup
 var scene = new THREE.Scene();
 
-var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight);
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight);
 camera.position.x = 5;
 camera.position.y = 0;
 camera.position.z = 15;
