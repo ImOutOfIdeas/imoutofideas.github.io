@@ -1,184 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
-
-/* :root {
-    --dark-goldenrod: #c58d1bff;
-    --russet: #75401aff;
-    --medium-carmine: #b83c38ff;
-    --blue-sapphire: #18596dff;
-    --davys-grey: #474747ff;
-} */
-
-body {
-  background-color: #282c34; /* Side bars */
-  overflow: hidden;
-}
-
 .App {
   text-align: center;
-  max-width: 728px;
-  margin: 0 auto;
-  /* font-family: 'MuseoModerno', cursive; */
-  font-family: monospace, cursive;
 }
 
-.App h1 {
-    color: #B83C38
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.App header {
-  font-family: 'Yellowtail', cursive;
-  font-size: 32px;
-  background-color: #f6ae2d; /* Header */
-  color: #FFF;
-  height: 10vh;
-  min-height: 50px;
-  color: white;
-  position: fixed;
-  width: 100%;
-  max-width: 728px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 99;
-  padding: 10px;
-  padding-left: 60px;
-  box-sizing: border-box;
-  animation: flash 3s infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-@keyframes flash {
-    from: { background-color: #f6ae2d;}
-    to: { background-color: #CA5753;}
-}
-
-
-.App section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.App-header {
+  background-color: #282c34;
   min-height: 100vh;
-  background-color: #233d4d; /* Main background */
-}
-
-main {
-  padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-}
-
-main::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-main::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-main::-webkit-scrollbar-thumb {
-  background: #C58D1B;
-}
-
-form {
-  height: 10vh;
-  position: fixed;
-  bottom: 0;
-  background-color: #975221; /* send button */
-  width: 100%;
-  max-width: 728px;
-  display: flex;
-  font-size: 1.5rem;
-}
-
-form button {
-  width: 20%;
-  background-color: #f26419; /* send button w/ text */
-}
-
-
-input {
-  line-height: 1.5;
-  width: 100%;
-  font-size: 1.5rem;
-  background: #474747; /* Text input */
-  color: white;
-  outline: none;
-  border: none;
-  padding: 0 10px;
-}
-
-button {
-  border-radius: 10px;
-  background-color: #B83C38; /* Signout button */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 1.25rem;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-
-.sign-in {
-  color: #C58D1B;
-  background: white;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-
-
-
-ul, li {
-  text-align: left;
-  list-style: none;
-}
-
-p {
-  max-width: 500px;
-  margin-bottom: 12px;
-  line-height: 24px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  position: relative;
-  color: white;
-  text-align: center;
-}
-
-.message {
-  display: flex;
   align-items: center;
-}
-
-
-.sent {
-  flex-direction: row-reverse;
-}
-
-.sent p {
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  background: #0b93f6; /* Sent message background */
-  align-self: flex-end;
-}
-.received p {
-  background: #e5e5ea; /* Received message background */
-  color: black;
 }
 
-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 2px 5px;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
