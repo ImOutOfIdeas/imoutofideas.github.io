@@ -1,6 +1,8 @@
-//manages first time setup and canvas resize events
 var ctx;
+let gameObjects = [];
 
+
+//manages first time setup and canvas resize events
 function setupCanvas() {
 
     ctx = document.getElementById("canvas").getContext('2d');
@@ -28,10 +30,16 @@ function setupCanvas() {
     onResize();
 }
 
-function draw(gameObject) {
-    ctx.fillStyle = gameObject.color;
-    ctx.fillRect(gameObject.x, gameObject.y,
-                gameObject.width, gameObject.height);
+function draw(gameObjects) {
+    for (var i = 0; i < gameObjects.length; i++) {
+        ctx.fillStyle = gameObjects[i].color;
+        ctx.fillRect(gameObjects[i].x, gameObjects[i].y,
+                     gameObjects[i].width, gameObjects[i].height);
+    }
 }
 
-export { ctx, setupCanvas, draw };
+function clear() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+export { setupCanvas, draw, clear, gameObjects };

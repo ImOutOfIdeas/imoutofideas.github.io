@@ -1,27 +1,27 @@
-import { ctx, setupCanvas, draw } from "./renderer.js";
+import { setupCanvas, draw, clear, gameObjects } from "./renderer.js";
 import {Player, Enemy, Wall} from "./gameobjects.js";
-
-
-import { keyW, keyA, keyS, keyD, keySpace, onKeyDown,
-         onKeyUp, controller, canMove} from "./controls.js";
+import { controller } from "./controls.js";
 
 
 setupCanvas();
 
 
-            ///////////////////
-          ///// Objects /////
-        ///////////////////
+          ///////////////////
+        ///// Objects /////
+      ///////////////////
 
-var player = new Player(50, 50, 50, 50, "black");
+var player = new Player(50, 50, 50, 50, "blue");
+var enemy = new Enemy(150, 150, 50, 50, "red");
 
 
+gameObjects.push(player, enemy); // Put
+//############################//
 
-function gameLoop() {
-    requestAnimationFrame(gameLoop);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+function main() {
+    requestAnimationFrame(main);
+    clear();
     controller(player);
-    draw(player);
+    draw(gameObjects);
 }
 
-gameLoop();
+main();

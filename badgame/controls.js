@@ -36,8 +36,6 @@ function onKeyDown(event) {
             keyW = true;
             canMove = false;
             break;
-        default:
-            canMove = true;
     }
 }
 
@@ -73,18 +71,22 @@ function controller(gameObject) {
     if (keyW == true) {
         gameObject.y -= speed;
         currentDirection = 1;
+        canMove = false;
     }
     if (keyA == true) {
         gameObject.x -= speed;
         currentDirection = 2;
+        canMove = false;
     }
     if (keyS == true) {
         gameObject.y += speed;
         currentDirection = 3;
+        canMove = false;
     }
     if (keyD == true) {
         gameObject.x += speed;
         currentDirection = 4;
+        canMove = false;
     }
     if (canMove) {
         speed = 50;
@@ -94,5 +96,5 @@ function controller(gameObject) {
     }
 }
 
-export { keyW, keyA, keyS, keyD, keySpace, onKeyDown, onKeyUp,
-        controller, canMove };
+
+export { controller };
