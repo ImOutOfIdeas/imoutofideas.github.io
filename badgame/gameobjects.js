@@ -5,6 +5,7 @@ class Player {
         this.width  = width;
         this.height = height;
         this.color = color;
+        this.pos = (this.x);
     }
 }
 
