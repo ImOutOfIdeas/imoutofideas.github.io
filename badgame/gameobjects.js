@@ -1,5 +1,3 @@
-const gameObjects = [];
-
 class Player {
     constructor(x, y, width, height, color) {
         this.y = y;
@@ -18,7 +16,6 @@ class Enemy {
         this.width  = width;
         this.height = height;
         this.color = color;
-        gameObjects.push(this.name);
     }
 }
 

@@ -1,5 +1,6 @@
 var ctx;
-let gameObjects = [];
+var gameObjects = [];
+
 
 //manages first time setup and canvas resize events
 function setupCanvas() {
@@ -40,5 +41,6 @@ function draw(gameObjects) {
 function clear() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
 
 export { setupCanvas, draw, clear, gameObjects };

@@ -111,7 +111,7 @@ function collisionDetection(player, other) {
             player.x + player.width > other[i].x &&
             player.y < other[i].y + other[i].height &&
             player.y + player.height > other[i].y) {
-                console.log("Hit: " + keyW, canMove)
+                console.log("Hit: ")
                 if (keyW == true) {
                     player.y += player.height;
                 }
@@ -124,10 +124,13 @@ function collisionDetection(player, other) {
                 if (keyD == true) {
                     player.x -= player.width;
                 }
+                else {
+                    canMove = true;
+                }
 
         }
     }
 }
 
 
-export { controller, collisionDetection, GAME_SCALE };
+export { controller, collisionDetection, CONST_SCALE };
