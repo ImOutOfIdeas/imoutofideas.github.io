@@ -1,5 +1,4 @@
 var ctx;
-var gameObjects = [];
 
 
 //manages first time setup and canvas resize events
@@ -43,4 +42,4 @@ function clear() {
 }
 
 
-export { setupCanvas, draw, clear, gameObjects, ctx };
+export { setupCanvas, draw, clear };
