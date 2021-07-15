@@ -43,4 +43,4 @@ function clear() {
 }
 
 
-export { setupCanvas, draw, clear, gameObjects };
+export { setupCanvas, draw, clear, gameObjects, ctx };

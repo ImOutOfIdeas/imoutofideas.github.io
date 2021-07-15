@@ -1,4 +1,4 @@
-import { setupCanvas, draw, clear, gameObjects } from "./renderer.js";
+import { setupCanvas, draw, clear, gameObjects, ctx } from "./renderer.js";
 import { controller, collisionDetection, CONST_SCALE } from "./controls.js";
 import { Player, Enemy, Wall } from "./gameobjects.js";
 
@@ -7,7 +7,11 @@ setupCanvas();
 
 
 //########## Map Handling ############//
-const tileAtlas = new Image("./tileset.png");
+const tileAtlas = new Image(100, 100);
+tileAtlas.src = "./tileset.png";
+tileAtlas.style.zIndex = 10;
+
+ctx.drawImage(tileAtlas, 100, 100, 100, 100);
 
 var map = {
     cols: 10, rows: 10, tileSize: CONST_SCALE,
@@ -48,6 +52,7 @@ function generateMap() {
     }
     //console.log(walls);
 };
+
 
 
 //######### Game Objects ##########//
