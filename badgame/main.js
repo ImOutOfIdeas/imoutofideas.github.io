@@ -1,6 +1,6 @@
 import { setupCanvas, draw, clear, gameObjects } from "./renderer.js";
-import {Player, Enemy, Wall} from "./gameobjects.js";
-import { controller } from "./controls.js";
+import { controller, collisionDetection, GAME_SCALE } from "./controls.js";
+import { Player, Enemy, Wall } from "./gameobjects.js";
 
 
 setupCanvas();
@@ -10,17 +10,24 @@ setupCanvas();
         ///// Objects /////
       ///////////////////
 
-var player = new Player(50, 50, 50, 50, "blue");
-var enemy = new Enemy(150, 150, 50, 50, "red");
+var player = new Player(1 * GAME_SCALE, 1 * GAME_SCALE, GAME_SCALE, GAME_SCALE, "blue");
+var enemy = new Enemy(3 * GAME_SCALE, 3 * GAME_SCALE, GAME_SCALE, GAME_SCALE, "red");
+
+gameObjects.push(player, enemy);
+
+var collisionObjects = [...gameObjects];
+collisionObjects.shift();
 
 
-gameObjects.push(player, enemy); // Put
+console.log(gameObjects);
+console.log(collisionObjects);
 //############################//
 
 function main() {
     requestAnimationFrame(main);
     clear();
     controller(player);
+    collisionDetection(player, collisionObjects)
     draw(gameObjects);
 }
 

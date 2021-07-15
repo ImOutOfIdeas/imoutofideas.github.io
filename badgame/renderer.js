@@ -1,7 +1,6 @@
 var ctx;
 let gameObjects = [];
 
-
 //manages first time setup and canvas resize events
 function setupCanvas() {
 
