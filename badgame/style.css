@@ -3,7 +3,7 @@ body {
     overflow: hidden;
 }
 canvas {
-    background: darkgoldenrod;
+    background: darkslategray;
     width:100vw;
     height:100vh;
 }

@@ -1,11 +1,11 @@
-window.addEventListener("keydown", onKeyDown, false);
-window.addEventListener("keyup", onKeyUp, false);
-
-
 //######### IMPORTANT ###########//
 const CONST_SCALE = 50; // for dynamic resizing (not yet implemented)
 var GAME_SCALE = CONST_SCALE;
 //##############################//
+
+
+window.addEventListener("keydown", onKeyDown, false);
+window.addEventListener("keyup", onKeyUp, false);
 
 
 var keyW = false;
@@ -111,23 +111,31 @@ function collisionDetection(player, other) {
             player.x + player.width > other[i].x &&
             player.y < other[i].y + other[i].height &&
             player.y + player.height > other[i].y) {
-                console.log("Hit: ")
-                if (keyW == true) {
-                    player.y += player.height;
-                }
-                if (keyA == true) {
-                    player.x += player.width;
-                }
-                if (keyS == true) {
-                    player.y -= player.height;
-                }
-                if (keyD == true) {
-                    player.x -= player.width;
-                }
-                else {
-                    canMove = true;
-                }
 
+            if (keyW == true) {
+                player.y += player.height;
+                console.log("Hit Top");
+                return true;
+            }
+            if (keyA == true) {
+                player.x += player.width;
+                console.log("Hit Left");
+                return true;
+            }
+            if (keyS == true) {
+                player.y -= player.height;
+                console.log("Hit Bottom");
+                return true;
+            }
+            if (keyD == true) {
+                player.x -= player.width;
+                console.log("Hit Right");
+                return true;
+            }
+            else {
+                canMove = true;
+            }
+        return true;
         }
     }
 }

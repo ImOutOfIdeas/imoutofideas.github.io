@@ -1,5 +1,10 @@
-var ctx;
+//######### IMPORTANT ###########//
+const CONST_SCALE = 50; // for dynamic resizing (not yet implemented)
+var GAME_SCALE = CONST_SCALE;
+//##############################//
 
+
+var ctx;
 
 //manages first time setup and canvas resize events
 function setupCanvas() {
