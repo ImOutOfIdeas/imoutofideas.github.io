@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="./icon_32.png">
-    <title>Bad Game</title>
-  </head>
+    <html lang="en" dir="ltr">
+        <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="style.css">
+            <link rel="shortcut icon" type="image/png" href="./icon_32.png">
+            <title>Bad Game</title>
+        </head>
 
-  <body>
-    <canvas id="canvas"></canvas>
+        <body>
+            <canvas id="menu"></canvas>
+            <script type="text/javascript">
+                var elem = document.getElementById('menu');
 
-    <script type="module" src="main.js"></script>
-  </body>
-</html>
+                elem.addEventListener("click", () => {
+                    elem.style.display = "none";
+                }, false);
+            </script>
+
+            <canvas id="canvas"></canvas>
+
+            <script type="module" src="main.js"></script>
+        </body>
+    </html>

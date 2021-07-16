@@ -1,9 +1,20 @@
 body {
     margin: 0;
     overflow: hidden;
+    position: relative;
 }
-canvas {
+
+#menu {
+    background: blueviolet;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+#canvas {
     background: darkslategray;
     width:100vw;
     height:100vh;
+    position: absolute;
 }

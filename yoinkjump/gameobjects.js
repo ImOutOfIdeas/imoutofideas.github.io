@@ -103,7 +103,8 @@ var map = {
     }
 };
 
-function generateMap() {
+
+function generateMap(map) {
     for (var c = 0; c < map.cols; c++) {
         for (var r = 0; r < map.rows; r++) {
             var tile = map.getTile(c, r);
@@ -130,4 +131,4 @@ function generateMap() {
     }
 };
 
-export { player, gameObjects, collisionObjects, enemies, generateMap };
+export { player, gameObjects, collisionObjects, enemies, generateMap, map };
