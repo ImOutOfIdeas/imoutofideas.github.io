@@ -114,31 +114,45 @@ function collisionDetection(player, other) {
 
             if (keyW == true) {
                 player.y += player.height;
-                console.log("Hit Top");
-                return true;
+                // console.log("Hit Top")
+                if (other[i].constructor.name == "Enemy") {
+                    player.x = player.xStart;
+                    player.y = player.yStart;
+                }
+
             }
             if (keyA == true) {
                 player.x += player.width;
-                console.log("Hit Left");
-                return true;
+                // console.log("Hit Left")
+                if (other[i].constructor.name == "Enemy") {
+                    player.x = player.xStart;
+                    player.y = player.yStart;
+                }
+
             }
             if (keyS == true) {
                 player.y -= player.height;
-                console.log("Hit Bottom");
-                return true;
+                // console.log("Hit Bottom");
+                if (other[i].constructor.name == "Enemy") {
+                    player.x = player.xStart;
+                    player.y = player.yStart;
+                }
+
             }
             if (keyD == true) {
                 player.x -= player.width;
-                console.log("Hit Right");
-                return true;
+                // console.log("Hit Right");
+                if (other[i].constructor.name == "Enemy") {
+                    player.x = player.xStart;
+                    player.y = player.yStart;
+                }
             }
             else {
                 canMove = true;
             }
-        return true;
         }
     }
 }
 
 
-export { controller, collisionDetection, CONST_SCALE };
+export { controller, collisionDetection };

@@ -6,12 +6,19 @@ var GAME_SCALE = CONST_SCALE;
 
 var gameObjects = [];
 var collisionObjects = [];
+var enemies = [];
 
+
+function rand(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 class Player {
     constructor(x, y, width, height, color) {
         this.y = y;
         this.x = x;
+        this.xStart = x;
+        this.yStart = y;
         this.width  = width;
         this.height = height;
         this.color = color;
@@ -26,6 +33,27 @@ class Enemy {
         this.width  = width;
         this.height = height;
         this.color = color;
+    }
+    move() {
+        let motion = rand(1, 4);
+
+        if (motion == 1) {
+            this.y -= CONST_SCALE;
+            this.y = this.y;
+        }
+
+        if (motion == 2) {
+            this.x += CONST_SCALE;
+            this.y = this.y;
+        }
+
+        if (motion == 3) {
+            this.y += CONST_SCALE;
+        }
+
+        if (motion == 4) {
+            this.x -= CONST_SCALE;
+        }
     }
 }
 
@@ -96,9 +124,10 @@ function generateMap() {
                 let color = "crimson";
                 gameObjects.push(new Enemy(x, y, width, height, color));
                 collisionObjects.push(new Enemy(x, y, width, height, color));
+                enemies.push(new Enemy(x, y, width, height, color));
             }
         }
     }
 };
 
-export { player, gameObjects, collisionObjects, generateMap, map };
+export { player, gameObjects, collisionObjects, enemies, generateMap };
