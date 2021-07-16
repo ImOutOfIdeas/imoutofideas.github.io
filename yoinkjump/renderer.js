@@ -4,7 +4,7 @@ var GAME_SCALE = CONST_SCALE;
 //##############################//
 
 
-var ctx;
+var ctx; 
 
 //manages first time setup and canvas resize events
 function setupCanvas() {

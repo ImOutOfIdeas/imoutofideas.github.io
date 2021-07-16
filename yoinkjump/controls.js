@@ -3,7 +3,7 @@ const CONST_SCALE = 50; // for dynamic resizing (not yet implemented)
 var GAME_SCALE = CONST_SCALE;
 //##############################//
 
-
+ 
 window.addEventListener("keydown", onKeyDown, false);
 window.addEventListener("keyup", onKeyUp, false);
 

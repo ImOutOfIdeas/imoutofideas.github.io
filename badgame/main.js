@@ -11,7 +11,7 @@ generateMap();
 //########## Game Loop ##########//
 function main() {
     requestAnimationFrame(main);
-    clear();
+    clear(); 
     controller(player);
     collisionDetection(player, collisionObjects);
     draw(gameObjects);

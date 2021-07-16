@@ -8,14 +8,46 @@
         </head>
 
         <body>
-            <canvas id="menu"></canvas>
+            <!-- <canvas id="menu"></canvas>
             <script type="text/javascript">
+                window.devicePixelRatio = 2;
+
                 var elem = document.getElementById('menu');
+                ctx = elem.getContext("2d");
+                ctx.scale(2, 2);
+
+                elem.width = elem.clientWidth * 2;
+                elem.height = elem.clientHeight * 2;
+                let width = elem.offsetWidth;
+                let height = elem.offsetHeight;
+
+                //######### Header #########//
+                ctx.textAlign = "center";
+                ctx.strokeStyle = "black";
+                ctx.font = "300px sans-serif";
+
+                ctx.fillText("Yoink Jump", width, height - 200);
+                //#########################//
+
+
+                //####### Subtitle #######//
+                ctx.strokeStyle = "black";
+                ctx.font = "80px sans-serif";
+
+                ctx.fillText("The Greatest Game Of All Time", width, height);
+                //#########################//
+
+
+                //###### Directions ######//
+                ctx.font = "bold 100px sans-serif";
+                ctx.fillText("Click Anywhere To Continue", width, height + 300);
+                //#########################//
+
 
                 elem.addEventListener("click", () => {
                     elem.style.display = "none";
                 }, false);
-            </script>
+            </script> -->
 
             <canvas id="canvas"></canvas>
 

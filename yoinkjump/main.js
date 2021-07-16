@@ -12,7 +12,7 @@ generateMap(map);
 function main() {
     requestAnimationFrame(main);
     clear();
-    controller(player);
+    controller(player); 
     collisionDetection(player, collisionObjects);
     draw(gameObjects);
 }

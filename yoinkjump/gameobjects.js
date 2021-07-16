@@ -6,7 +6,7 @@ var GAME_SCALE = CONST_SCALE;
 
 var gameObjects = [];
 var collisionObjects = [];
-var enemies = [];
+var enemies = []; 
 
 
 function rand(min, max) {
