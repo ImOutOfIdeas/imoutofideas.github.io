@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, red , blue);
+    user-select: none;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -450%);
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+}
+
+
+#username, #password {
+    position: absolute;
+    width: 15rem;
+    height: 2.5rem;
+    border: 3px solid black;
+    font-size: 2rem;
+}
+
+#submit {
+    position: absolute;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1.5rem;
+
+    background-color: rgb(23, 127, 245);
+}
