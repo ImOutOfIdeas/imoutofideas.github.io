@@ -83,7 +83,6 @@ function render() {
     pos.x = x;
     pos.y = y;
     
-    console.log(pos);
 }
 
 
@@ -121,8 +120,7 @@ function renderp() {
 
     posp.x = xp;
     posp.y = yp;
-    
-    console.log(posp);
+
 }
 
 
@@ -159,8 +157,7 @@ function renders() {
 
     poss.x = xs;
     poss.y = ys;
-    
-    console.log(poss);
+
 }
 
 
