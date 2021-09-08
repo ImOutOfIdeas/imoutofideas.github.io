@@ -10,7 +10,6 @@ function sayIntro() {
     speech.text = "Hello, your resolution is 1920 by 1080... Good Luck. You're gonna need it!";
     window.speechSynthesis.speak(speech);
     
-    setInterval(sayPos, 100);
 }
 
 
@@ -24,3 +23,5 @@ function sayPos() {
     window.speechSynthesis.speak(speech);
 }
 
+setTimeout(sayIntro, 500);
+setInterval(sayPos, 100);
