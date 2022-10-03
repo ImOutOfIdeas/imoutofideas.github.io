@@ -1,0 +1,21 @@
+.task {
+    background-color: #2e2e2e;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    user-select: none;
+}
+
+.task h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task.reminder {
+    border-left: 10px solid white;
+}
+
+fa-icon:hover {
+    cursor: pointer;
+}
+

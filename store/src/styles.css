@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    transition: filter ease 300ms;
+}
+.btn:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
