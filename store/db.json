@@ -17,12 +17,6 @@
       "text": "Doctors Birthday Party",
       "day": "May 12th at 5:30pm",
       "reminder": false
-    },
-    {
-      "id": 4,
-      "text": "Test",
-      "day": "May 1st at 1:30pm",
-      "reminder": false
     }
   ]
 }
