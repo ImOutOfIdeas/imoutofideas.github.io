@@ -8,29 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Friendly Recipes</title>
 </head>
-<body>
+<body> 
     <div class="backBlur"></div>
     <div class="bg"></div>
     
+    <div id="emailVer">
+        <h1>Email Verification Sent...</h1>
+        <p>The email will most likely end up in the spam folder. So be sure to check.</p>
+    </div>
     <!-- Shows Sign In -->
-    <div class="loginContainer">
+    <div id="loginContainer"> 
         <div class="title">
             <h1>Friendly Recipes</h1>
         </div>
+        <div class="page">Sign In</div>
         <div>
             <p>Enter Email</p>
             <input type="text" name="email" id="email" placeholder="Email" maxLength="100">
         </div>
+
         <div>
             <p>Enter Password</p>
             <input type="password" name="password" id="password" placeholder="Password" maxLength="100">
         </div>
+
+        <div id="error">Username or password was incorrect.</div>
+
         <div><input type="submit" id="submit" value="Login"></div>
-    </div>
 
-    <!-- Shows form to add or remove recipes -->
-    <div class="loggedIn">
-
+        <div id="signUp">New user? <a href="http://localhost:3000/signup">Sign up</a></div>
     </div>
     <script type="module" src="app.js"></script>
 </body>
