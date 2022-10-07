@@ -22,10 +22,10 @@ const auth = getAuth(app);
 
 
 onAuthStateChanged(auth, (user) => {
-    if (user && user.emailVerified) {
+    if (user.emailVerified) {
         window.location.replace('http://localhost:3000/home.html');
     } else {
-      // User is signed out
+        console.log("Not logged in")
     }
 });
 
@@ -37,24 +37,30 @@ document.getElementById("submit").addEventListener("click", () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed in 
-            const user = userCredential.user;
-            if (user.emailVerified) {
-                // TODO: Replace with Actual Home Page URL
-                window.location.replace('http://localhost:3000/home.html');
-            } 
-            else {
-                sendEmailVerification(auth.currentUser)
-                    .then(() => {
-                        document.getElementById("loginContainer").style.display = "none";
-                        document.getElementById("emailVer").style.display = "block";
-                    });
-            }
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorMessage);
-            document.getElementById("error").classList.add("visible");
-            document.getElementById("password").value = "";
-        });
+        const user = userCredential.user;
+        console.log(user);
+        if (user.emailVerified) {
+            // TODO: Replace with Actual Home Page URL
+            window.location.replace('http://localhost:3000/home.html');
+        } 
+        else {
+            sendEmailVerification(auth.currentUser)
+            .then(() => {
+                document.getElementById("loginContainer").style.display = "none";
+                document.getElementById("emailVer").style.display = "block";
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
+        }
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        document.getElementById("error").classList.add("visible");
+        document.getElementById("password").value = "";
+    });
 });

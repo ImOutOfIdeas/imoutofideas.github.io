@@ -12,6 +12,7 @@
   "dependencies": {
     "firebase": "^9.11.0",
     "firebase-tools": "^11.14.1",
-    "firebaseui": "^6.0.1"
+    "firebaseui": "^6.0.1",
+    "serve": "^14.0.1"
   }
 }

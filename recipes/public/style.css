@@ -42,6 +42,11 @@ body, html {
 .emailVer {
     display: none;
     padding: 50px;
+    text-align: center;
+}
+
+.emailVer > h1 {
+    margin-bottom: 50px;
 }
 
 /* Login Design */
