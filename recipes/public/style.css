@@ -39,15 +39,6 @@ body, html {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.emailVer {
-    display: none;
-    padding: 50px;
-    text-align: center;
-}
-
-.emailVer > h1 {
-    margin-bottom: 50px;
-}
 
 /* Login Design */
 #loginContainer, #emailVer {
@@ -56,18 +47,18 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-
+    
     /* Layout */
     height: 550px;
     width: 475px;
     padding: 40px;
     padding-top: 20px;
-
+    
     /* Styling */
     background-color: white;
 }
 
-#loginContainer > div {
+#loginContainer > div, #emailVer > div {
     margin-bottom: 20px;
 }
 
@@ -119,7 +110,7 @@ body, html {
     }
 }
 
-#loginContainer > div > input[type=submit]{
+#loginContainer > div > input[type=submit], #emailVer > div > input[type=submit]{
     float: right;
     width: 110px;
     height: 45px;
@@ -132,11 +123,36 @@ body, html {
     cursor: pointer;
 }
 
-#loginContainer > div > input[type=submit]:hover{
+#loginContainer > div > input[type=submit]:hover, #emailVer > div > input[type=submit]:hover{
     background-color: var(--accent-color);
     color: white;
 }
 
 #loginContainer #signUp {
     margin-top: 65px;
+}
+
+
+#emailVer > div > h1 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#emailVer > div > p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-bottom: 85px;
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+#emailVer > div > #resend {
+    float: left;
+}
+
+#emailVer > div > #cooldown {
+    color: white;
+    user-select: none;
+    font-size: 14px;
 }

@@ -20,29 +20,28 @@ const auth = getAuth(app);
 document.getElementById("submit").addEventListener("click", () => {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-
     createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // TODO: Replace with Actual Home Page URL
-            window.location.replace('http://localhost:3000');
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
 
-            if (errorCode == "auth/invalid-email") {
-                document.getElementById("error").innerHTML = "Please enter a valid email address";
-                document.getElementById("email").value = "";
-                document.getElementById("password").value = "";
-            }
-            if (errorCode == "auth/weak-password") {
-                document.getElementById("error").innerHTML = "Password must be at least six characters";
-                document.getElementById("password").value = "";
-            }
-            document.getElementById("error").classList.add("visible"); 
-        });
+        window.location.replace('http://192.168.1.227:3000');
+        // window.location.replace('friendly-recipes-bfa.web.app');
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+
+        if (errorCode == "auth/invalid-email") {
+            document.getElementById("error").innerHTML = "Please enter a valid email address";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+        }
+        if (errorCode == "auth/weak-password") {
+            document.getElementById("error").innerHTML = "Password must be at least six characters";
+            document.getElementById("password").value = "";
+        }
+        document.getElementById("error").classList.add("visible"); 
+    });
 });

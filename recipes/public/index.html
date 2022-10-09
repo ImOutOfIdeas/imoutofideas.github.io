@@ -13,9 +13,13 @@
     <div class="bg"></div>
     
     <div id="emailVer">
-        <h1>Email Verification Sent...</h1>
-        <p>The email will most likely end up in the spam folder. So be sure to check.</p>
-        <button class="verify"></button>
+        <div><h1>Email Verification Sent</h1></div>
+        <div><p>Press continue after you verify your email. The email will most likely end up in your spam folder. Be sure to check!</p></div>
+        <div><p id="cooldown">-</p></div>
+        <div><input type="submit" id="continue" value="Continue"></div>
+        <div><input type="submit" id="resend" value="Resend"></div>
+        <div><a href="http://localhost">Back to login</a></div>
+        <!-- <div><a href="friendly-recipes-bfa.web.app">Back to login</a></div> -->
     </div>
     <!-- Shows Sign In -->
     <div id="loginContainer"> 
@@ -37,7 +41,8 @@
 
         <div><input type="submit" id="submit" value="Login"></div>
 
-        <div id="signUp">New user? <a href="http://localhost:3000/signup">Sign up</a></div>
+        <div id="signUp">New user? <a href="http://192.168.1.227:3000/signup">Sign up</a></div>
+        <!-- <div id="signUp">New user? <a href="friendly-recipes-bfa.web.app/signup">Sign up</a></div> -->
     </div>
     <script type="module" src="app.js"></script>
 </body>

@@ -24,22 +24,71 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
         console.log(user);
     } else {
-        console.log("No one is signed in");
+        // Takes back to login if not a valid user
+        window.location.replace('http://192.168.1.227:3000');
+        // window.location.replace('friendly-recipes-bfa.web.app');
     }
 });
 
-// Handles Database access
-async function showRecipes() {
-    document.getElementById("notLoggedIn");
-    const querySnapshot = await getDocs(collection(db, "recipes"));
-    querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-    });
-}
 
+// Requests recipes from database and makes array of recipe objects (recipes)
+const recipes = [];
+
+const querySnapshot = await getDocs(collection(db, "recipes"));
+querySnapshot.forEach((doc) => {
+    recipes.push({
+        "title": doc.id,
+        "tags": doc.data().tags,
+        "ingredients": doc.data().ingredients,
+        "directions": doc.data().directions
+    });
+});
+
+
+// Create elements to store each recipe
+const container = document.getElementById("recipeContainer");
+recipes.forEach(recipe => {
+    // Targets Individual Recipe Container
+    var div = container.appendChild(document.createElement("div"));
+
+    // Create Element, Set Name To Recipe detail, append to container
+    var name = document.createElement("h1");
+    name.innerHTML = recipe.title;
+    div.appendChild(name);
+
+    // adds all tags from recipe
+    recipe.tags.forEach(tag => {
+        var description = document.createElement("span");
+        description.innerHTML = tag;
+        div.appendChild(description);
+    });
+
+    // Creates List of items
+    var items = document.createElement("ul");
+    
+    // Adds Each Ingredient to list
+    recipe.ingredients.forEach(ingredient => {
+        var item = document.createElement("li");
+        item.innerHTML = ingredient;
+        items.appendChild(item);
+    })
+    
+    // Appends filled list to recipe container
+    div.appendChild(items);
+
+    var instructions = document.createElement("p");
+    instructions.innerHTML = recipe.directions;
+    div.appendChild(instructions);
+
+    console.log(div);
+});
+    
+
+
+// Allow Users to upload recipe suggestions
 async function addRecipe(name, ingredients, directions) {
     try {
-        const docRef = await addDoc(collection(db, "recipes"), {
+        const docRef = await addDoc(collection(db, "unverified"), {
             ingredients: ingredients,
             directions: directions
         });
@@ -50,10 +99,15 @@ async function addRecipe(name, ingredients, directions) {
 }
 
 
+// FIGURE OUT ACCOUNT PRIVAILAGE
+// Allow admin accounts to review, edit, and upload recipes.
+
+
 // Allow User to log out
 document.getElementById("logout").addEventListener("click", () => {
     signOut(auth).then(() => {
-        window.location.replace("http://localhost:3000")
+        window.location.replace("http://192.168.1.227:3000");
+        // window.location.replace('friendly-recipes-bfa.web.app');
     }).catch((error) => {
         console.log(error);
     });
