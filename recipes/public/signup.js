@@ -25,8 +25,8 @@ document.getElementById("submit").addEventListener("click", () => {
         // Signed in 
         const user = userCredential.user;
 
-        window.location.replace('http://192.168.1.227:3000');
-        // window.location.replace('friendly-recipes-bfa.web.app');
+        // window.location.assign('http://192.168.1.227:3000');
+        window.location.assign('https://imoutofideas.github.io/recipes/index.html');
     })
     .catch((error) => {
         const errorCode = error.code;

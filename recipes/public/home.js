@@ -22,11 +22,12 @@ const db = getFirestore(app);
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        console.log(user);
+        // FIGURE OUT HOW TO AUTHORIZE ADMINS
+        // console.log(user.admin == true);
     } else {
         // Takes back to login if not a valid user
-        window.location.replace('http://192.168.1.227:3000');
-        // window.location.replace('friendly-recipes-bfa.web.app');
+        // window.location.assign('http://192.168.1.227:3000');
+        window.location.assign('https://imoutofideas.github.io/recipes/index.html');
     }
 });
 
@@ -80,7 +81,6 @@ recipes.forEach(recipe => {
     instructions.innerHTML = recipe.directions;
     div.appendChild(instructions);
 
-    console.log(div);
 });
     
 
@@ -106,8 +106,8 @@ async function addRecipe(name, ingredients, directions) {
 // Allow User to log out
 document.getElementById("logout").addEventListener("click", () => {
     signOut(auth).then(() => {
-        window.location.replace("http://192.168.1.227:3000");
-        // window.location.replace('friendly-recipes-bfa.web.app');
+        // window.location.assign("http://192.168.1.227:3000");
+        window.location.assign('https://imoutofideas.github.io/recipes/index.html');
     }).catch((error) => {
         console.log(error);
     });

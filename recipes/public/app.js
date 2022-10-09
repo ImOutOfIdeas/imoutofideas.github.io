@@ -23,13 +23,12 @@ const auth = getAuth(app);
 
 onAuthStateChanged(auth, (user) => {
     if (user && user.emailVerified) {
-        window.location.replace('http://192.168.1.227:3000/home.html');
-        // window.location.replace('friendly-recipes-bfa.web.app/home.html');
+        // window.location.assign('http://192.168.1.227:3000/home.html');
+        window.location.assign('https://imoutofideas.github.io/recipes/home');
     }
     else if (user) {
         user.sentEmail = true;
     }
-    
     if (window.location.search == "?continue") {
         document.getElementById("loginContainer").style.display = "none";
         document.getElementById("emailVer").style.display = "block";
@@ -46,8 +45,8 @@ document.getElementById("submit").addEventListener("click", () => {
         // Signed in 
         const user = userCredential.user;
         if (user.emailVerified) {
-            window.location.replace('http://192.168.1.227:3000/home.html');
-            // window.location.replace('friendly-recipes-bfa.web.app/home.html');
+            // window.location.assign('http://192.168.1.227:3000/home.html');
+            window.location.replace("https://imoutofideas.github.io/recipes/home.html");
         } 
         else if (user.sentEmail) {
             document.getElementById("loginContainer").style.display = "none";
@@ -97,8 +96,8 @@ document.getElementById("submit").addEventListener("click", () => {
 
 // Handles Continue Button On Email Verification 
 document.getElementById("continue").addEventListener("click", () => {
-    window.location.assign("http://192.168.1.227:3000?continue");
-    // window.location.assign("friendly-recipes-bfa.web.app?continue");
+    // window.location.assign("http://192.168.1.227:3000?continue");
+    window.location.assign("https://imoutofideas.github.io/recipes/index.html?continue");
     
 });
 
