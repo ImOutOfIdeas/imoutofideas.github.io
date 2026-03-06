@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>WAV Hex</title>
+</head>
+<body>
+    <input type="file" id="filein" accept=".wav,audio/wav">
+
+    <div class="file" id="file">
+        <div class="clip">
+            <div class="paper"></div>
+            <canvas id="canvas"></canvas>
+            <div class="prompt" id="prompt">
+                <div class="big">📄</div>
+                <div>Drop a .WAV file</div>
+                <div style="font-size:14px;color:#aaa">or click to browse</div>
+            </div>
+        </div>
+
+        <!-- file outline drawn in SVG so bevel sits on top of canvas -->
+        <svg class="border" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- shadow edge (bottom-right) -->
+            <polyline points="230,0 320,56 320,400 0,400 0,0" fill="none" stroke="#808080" stroke-width="1.5" />
+            <!-- light edge (top-left) -->
+            <polyline points="0,400 0,0 230,0" fill="none" stroke="#ffffff" stroke-width="1.5" />
+            <!-- fold crease -->
+            <line x1="230" y1="0" x2="320" y2="56" stroke="#808080" stroke-width="1" />
+            <!-- fold triangle -->
+            <polygon points="230,0 320,56 230,56" fill="#c0c0c0" stroke="#999" stroke-width="0.5" />
+            <!-- fold highlight -->
+            <line x1="230" y1="0" x2="230" y2="56" stroke="#fff" stroke-width="0.8" />
+        </svg>
+
+        <div class="label" id="label"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
