@@ -12,6 +12,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--cream);font-family:var(--fm)}
 
+
 /* GRAIN */
 body::before{content:'';position:fixed;inset:0;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
@@ -22,6 +23,9 @@ body::before{content:'';position:fixed;inset:0;
 body::after{content:'';position:fixed;inset:0;
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);
   pointer-events:none;z-index:9997}
+
+/* HIDE SCROLLBARS */
+.panel {&::-webkit-scrollbar{display:none;}scrollbar-width:none;-ms-overflow-style:none;}
 
 /* APP */
 #app{position:fixed;inset:0;left:58px;right:58px}
@@ -182,20 +186,6 @@ body::after{content:'';position:fixed;inset:0;
 .tbadge{font-family:var(--fm);font-size:10px;color:var(--amber);border:1px solid rgba(212,160,23,.4);padding:2px 8px;border-radius:12px}
 
 /* ============================
-   SKILLS
-   ============================ */
-#psk{background:var(--bg);padding:36px 56px;overflow-y:auto}
-.sktitle{font-family:var(--fs);font-size:56px;color:var(--amber);text-shadow:4px 4px 0 var(--brown);margin-bottom:36px}
-.skgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
-.skcat{background:linear-gradient(180deg,var(--bg2),#1a0f05);border:1px solid var(--brown);border-top:3px solid var(--amber);padding:18px}
-.skcname{font-family:var(--fd);font-size:13px;letter-spacing:3px;color:var(--amber);text-transform:uppercase;margin-bottom:14px}
-.ski{margin-bottom:9px}
-.skiname{font-family:var(--fm);font-size:11px;color:var(--cream);margin-bottom:3px;display:flex;justify-content:space-between}
-.skbg{height:4px;background:rgba(255,255,255,.1);border-radius:2px}
-.skfill{height:4px;background:linear-gradient(90deg,var(--orange),var(--amber));border-radius:2px;transform:scaleX(0);transform-origin:left;animation:bg 1.5s cubic-bezier(.22,1,.36,1) both}
-@keyframes bg{to{transform:scaleX(1)}}
-
-/* ============================
    CONTACT
    ============================ */
 #pc{background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;overflow:hidden}
@@ -207,7 +197,7 @@ body::after{content:'';position:fixed;inset:0;
 .ci:hover{background:rgba(232,98,10,.1);transform:translateX(5px)}
 .cicon{font-size:18px}
 .ctxt{flex:1}
-.clabel{font-family:var(--fm);font-size:9px;color:var(--amber);letter-spacing:2px;text-transform:uppercase}
+.clabel{font-family:var(--fm);font-size:10px;color:var(--amber);letter-spacing:2px;text-transform:uppercase}
 .cval{font-family:var(--fm);font-size:14px;color:var(--cream)}
 .avail{display:inline-flex;align-items:center;gap:8px;background:rgba(100,180,50,.1);border:1px solid var(--green);color:var(--green);font-family:var(--fm);font-size:11px;padding:8px 16px;border-radius:2px;margin-top:22px;box-shadow:0 0 14px rgba(100,180,50,.2)}
 .adot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:ap 1.5s ease-in-out infinite;box-shadow:0 0 8px var(--green)}

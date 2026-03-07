@@ -1,7 +1,7 @@
 // ==============================
 // PANEL NAVIGATION
 // ==============================
-const PANEL_IDS={home:'ph',eurorack:'pe',bios:'pb',scope:'ps',projects:'pp',skills:'psk',contact:'pc'};
+const PANEL_IDS={home:'ph',eurorack:'pe',bios:'pb',scope:'ps',projects:'pp',contact:'pc'};
 let cur='home', transitioning=false;
 function sw(id, el){
   if(transitioning||id===cur)return;
@@ -57,7 +57,7 @@ async function startAudio(){
   lfo.start();
   started=true;
   document.getElementById('led').classList.add('on');
-  document.getElementById('rstat').textContent='POWER ON — READY TO SYNTHESIZE';
+  document.getElementById('rstat').textContent='POWER ON — READY';
   const sb=document.getElementById('startbtn');sb.textContent='RUNNING';sb.style.background='var(--green)';
   animVU();animVScope();
 }

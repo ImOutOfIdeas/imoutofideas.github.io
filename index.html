@@ -24,7 +24,6 @@
 <div id="rt">
   <div class="tab" onclick="sw('bios',this)"><span class="ti">i</span><span class="tl">Info </span></div>
   <div class="tab" onclick="sw('projects',this)"><span class="ti">⌬</span><span class="tl">Projects</span></div>
-  <div class="tab" onclick="sw('skills',this)"><span class="ti">⟡</span><span class="tl">Skills</span></div>
   <div class="tab" onclick="sw('contact',this)"><span class="ti">✉</span><span class="tl">Contact</span></div>
 </div>
 
@@ -131,7 +130,7 @@
               <div class="klabel">RATE</div><div class="kval" id="kvlrate">1.0 Hz</div>
             </div>
             <div class="kg">
-              <div class="kw"><div class="knob" id="kldpth" data-min="0" data-max="900" data-val="0"><div class="kl"></div></div></div>
+              <div class="kw"><div class="knob" id="kldpth" data-min="0" data-max="100" data-val="0"><div class="kl"></div></div></div>
               <div class="klabel">PITCH MOD</div><div class="kval" id="kvldpth">0</div>
             </div>
             <div class="kg">
@@ -215,7 +214,7 @@
         <button class="sbtn" id="smfft" onclick="setSM('fft')">FREQUENCY</button>
         <button class="sbtn" id="smlis" onclick="setSM('lis')">LISSAJOUS</button>
       </div>
-      <div class="slabel" style="font-size:10px;opacity:.5">Start Eurorack engine to see signal · Demo waveform shown when idle</div>
+      <div class="slabel" style="font-size:13px;opacity:.5">Start Eurorack engine to see signal · Demo waveform shown when idle</div>
     </div>
 
     <!-- PROJECTS -->
@@ -226,32 +225,6 @@
         <div class="pcard"><div class="pnum">02</div><div class="ptag">▸ ML/AI · 2024</div><div class="pname">NeuralMesh</div><div class="pdesc">Distributed neural network training framework. Reduced training time 60% via custom gradient synchronization.</div><div class="ptechs"><span class="tbadge">Python</span><span class="tbadge">PyTorch</span><span class="tbadge">CUDA</span><span class="tbadge">gRPC</span></div></div>
         <div class="pcard"><div class="pnum">03</div><div class="ptag">▸ DevOps · 2023</div><div class="pname">Orbital Deploy</div><div class="pdesc">Zero-downtime deployment orchestrator for microservices. 99.99% uptime across 200+ services in production.</div><div class="ptechs"><span class="tbadge">Go</span><span class="tbadge">K8s</span><span class="tbadge">Terraform</span><span class="tbadge">AWS</span></div></div>
         <div class="pcard"><div class="pnum">04</div><div class="ptag">▸ Open Source · 2023</div><div class="pname">Chromatic</div><div class="pdesc">Blazing-fast CSS-in-JS runtime with zero overhead. 2k+ GitHub stars, used by 50+ companies in production.</div><div class="ptechs"><span class="tbadge">TypeScript</span><span class="tbadge">Babel</span><span class="tbadge">Webpack</span><span class="tbadge">Vite</span></div></div>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="panel" id="psk">
-      <div class="sktitle">Skills.</div>
-      <div class="skgrid">
-        <div class="skcat"><div class="skcname">Languages</div>
-          <div class="ski"><div class="skiname"><span>JavaScript / TypeScript</span><span>95%</span></div><div class="skbg"><div class="skfill" style="width:95%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>Python</span><span>90%</span></div><div class="skbg"><div class="skfill" style="width:90%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>Go</span><span>90%</span></div><div class="skbg"><div class="skfill" style="width:80%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>C / C++</span><span>95%</span></div><div class="skbg"><div class="skfill" style="width:65%"></div></div></div>
-        </div>
-        <div class="skcat"><div class="skcname">Frontend</div>
-          <div class="ski"><div class="skiname"><span>CSS / Animation</span><span>90%</span></div><div class="skbg"><div class="skfill" style="width:90%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>WebGL / Three.js</span><span>90%</span></div><div class="skbg"><div class="skfill" style="width:70%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>Web Audio API</span><span>95%</span></div><div class="skbg"><div class="skfill" style="width:85%"></div></div></div>
-        </div>
-        <div class="skcat"><div class="skcname">Backend</div>
-          <div class="ski"><div class="skiname"><span>Node.js / Deno</span><span>90%</span></div><div class="skbg"><div class="skfill" style="width:90%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>PostgreSQL / Redis</span><span>88%</span></div><div class="skbg"><div class="skfill" style="width:88%"></div></div></div>
-        </div>
-        <div class="skcat"><div class="skcname">Infrastructure</div>
-          <div class="ski"><div class="skiname"><span>AWS / GCP</span><span>85%</span></div><div class="skbg"><div class="skfill" style="width:85%"></div></div></div>
-          <div class="ski"><div class="skiname"><span>Docker / K8s</span><span>88%</span></div><div class="skbg"><div class="skfill" style="width:88%"></div></div></div>
-        </div>
       </div>
     </div>
 
@@ -277,7 +250,7 @@
         </div>
         <div class="ci">
           <div class="cicon">📍</div>
-          <div class="ctxt"><div class="clabel">Columbus, OH</div><div class="cval">Columbus, OH (Open to Remote / In-Person)</div></div>
+          <div class="ctxt"><div class="clabel">Columbus, OH</div><div class="cval">Open to Remote / In-Person</div></div>
         </div>
         <div class="avail"><div class="adot"></div>ACTIVELY SEEKING OPPORTUNITIES — 2026</div>
       </div>
