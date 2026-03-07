@@ -142,7 +142,7 @@
 
           <!-- SEQUENCER -->
           <div class="mod ms">
-            <div class="mname">8-STEP SEQUENCER</div>
+            <div class="mname">16-STEP SEQUENCER</div>
             <div class="ssteps" id="ssteps"></div>
             <div class="trans" style="margin-top:auto">
               <button class="tbtn" id="seqpl">▶</button>
@@ -162,7 +162,7 @@
             <div class="mname">OUTPUT</div>
             <div class="vu"><div class="vubar" id="vubar" style="height:0%"></div></div>
             <div class="kg">
-              <div class="kw"><div class="knob" id="kvol" data-min="0" data-max="1" data-val="0.7"><div class="kl"></div></div></div>
+              <div class="kw"><div class="knob" id="kvol" data-min="0" data-max="0.5" data-val="0.25"><div class="kl"></div></div></div>
               <div class="klabel">VOLUME</div><div class="kval" id="kvvol">50%</div>
             </div>
             <div class="kg">
@@ -213,7 +213,7 @@
       <div class="sctrl">
         <button class="sbtn sa" id="smtime" onclick="setSM('time')">TIME DOMAIN</button>
         <button class="sbtn" id="smfft" onclick="setSM('fft')">FREQUENCY</button>
-        <button class="sbtn" id="smlis" onclick="setSM('lissajous')">LISSAJOUS</button>
+        <button class="sbtn" id="smlis" onclick="setSM('lis')">LISSAJOUS</button>
       </div>
       <div class="slabel" style="font-size:10px;opacity:.5">Start Eurorack engine to see signal · Demo waveform shown when idle</div>
     </div>

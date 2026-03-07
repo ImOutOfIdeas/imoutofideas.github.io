@@ -29,7 +29,7 @@ const P={   freq:440, oct:1, det:0, wave:'sine',
             cut:2000, res:1, envAmt:.5, ftype:'lowpass',
             atk:.01, dec:.1, sus:.7, rel:.3,
             lrate:1, ldpth:0, lf:0, lwave:'sine',
-            vol:.5, rvb:.1, bpm:120};
+            vol:.25, rvb:.1, bpm:120};
 
 const NF={'C3':130.81,'D3':146.83,'E3':164.81,'F3':174.61,'G3':196,'A3':220,'B3':246.94,
   'C4':261.63,'D4':293.66,'E4':329.63,'F4':349.23,'G4':392,'A4':440,'B4':493.88,
@@ -37,8 +37,10 @@ const NF={'C3':130.81,'D3':146.83,'E3':164.81,'F3':174.61,'G3':196,'A3':220,'B3'
 const ALLNOTES=Object.keys(NF);
 
 const SEQ=[
-  {note:'C4',on:true},{note:'E4',on:false},{note:'G4',on:true},{note:'A4',on:false},
-  {note:'C5',on:true},{note:'G4',on:false},{note:'E4',on:true},{note:'D4',on:false}
+  {note:'C4',on:true},{note:'C4',on:false},{note:'F4',on:true},{note:'C4',on:false},
+  {note:'E4',on:true},{note:'C4',on:false},{note:'G4',on:true},{note:'C4',on:false},
+  {note:'C4',on:false},{note:'C4',on:false},{note:'C4',on:false},{note:'C4',on:false},
+  {note:'C4',on:false},{note:'C4',on:false},{note:'C4',on:false},{note:'C4',on:false}
 ];
 
 async function startAudio(){
@@ -90,7 +92,8 @@ function animVU(){
   const d=new Uint8Array(analyser.frequencyBinCount);
   (function loop(){
     analyser.getByteTimeDomainData(d);
-    let s=0;for(let i=0;i<d.length;i++){const v=(d[i]-128)/128;s+=v*v;}
+    let s=0;
+    for(let i=0;i<d.length;i++){const v=(d[i]-128)/128;s+=v*v;}
     const p=Math.min(100,Math.sqrt(s/d.length)*280);
     vb.style.height=p+'%';
     vb.style.background=p>70?'#f00':p>50?'#ff0':'var(--green)';
@@ -118,7 +121,7 @@ function animVScope(){
   const c=document.getElementById('ssteps');
   SEQ.forEach((s,i)=>{
     const d=document.createElement('div');d.className='sstep';
-    d.innerHTML=`<div class="snote ${s.on?'on':''}" id="sn${i}" onclick="toggleSS(${i})">${s.note.replace(/\d/,'')}</div><div class="spm" id="sp${i}" data-i="${i}">${s.note}</div>`;
+    d.innerHTML=`<div class="snote ${s.on?'on':''}" id="sn${i}" onclick="toggleSS(${i})"></div><div class="spm" id="sp${i}" data-i="${i}">${s.note}</div>`;
     c.appendChild(d);
   });
   document.querySelectorAll('.spm').forEach(el=>{
@@ -144,15 +147,16 @@ function toggleSeq(){
 
 function runSeq(){
   if(!playing)return;
-  document.querySelectorAll('.snote').forEach(el=>el.classList.remove('as'));
+  let notes = document.querySelectorAll('.snote')
+  notes.forEach(el=>el.classList.remove('as'));
   document.getElementById('sn'+seqStep).classList.add('as');
   if(SEQ[seqStep].on&&actx){
     const fr=NF[SEQ[seqStep].note]||440;
     playNote(fr,'seq');
     setTimeout(()=>stopNote('seq'),(60000/P.bpm)*.75);
   }
-  seqStep=(seqStep+1)%8;
-  seqTimer=setTimeout(runSeq,60000/P.bpm);
+  seqStep = (seqStep + 1) % notes.length;
+  seqTimer = setTimeout(runSeq, 60000/P.bpm);
 }
 
 document.getElementById('seqrst').addEventListener('click',()=>{seqStep=0;document.querySelectorAll('.snote').forEach(el=>el.classList.remove('as'));});
@@ -187,7 +191,7 @@ function onKC(id,v){
     case'klrate':P.lrate=v;document.getElementById('kvlrate').textContent=f(v)+' Hz';if(lfo)lfo.frequency.value=v;break;
     case'kldpth':P.ldpth=v;document.getElementById('kvldpth').textContent=Math.round(v);if(lfog)lfog.gain.value=v;break;
     case'klf':P.lf=v;document.getElementById('kvlf').textContent=Math.round(v)+' Hz';if(lfofg)lfofg.gain.value=v;break;
-    case'kvol':P.vol=v;document.getElementById('kvvol').textContent=Math.round(v*100)+'%';if(gain)gain.gain.value=v;break;
+    case'kvol':P.vol=v;document.getElementById('kvvol').textContent=Math.round(v*200)+'%';if(gain)gain.gain.value=v;break;
     case'krvb':P.rvb=v;document.getElementById('kvrvb').textContent=Math.round(v*100)+'%';break;
     case'kbpm':P.bpm=Math.round(v);document.getElementById('bpmd').textContent=Math.round(v);break;
   }
